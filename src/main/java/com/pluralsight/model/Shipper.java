@@ -5,6 +5,11 @@ public class Shipper {
     private String companyName;
     private String phoneNumber;
 
+    public Shipper(String companyName, String phoneNumber) {
+        this.companyName = companyName;
+        this.phoneNumber = phoneNumber;
+    }
+
     public Shipper(String companyName, String phoneNumber, int shipperID) {
         this.companyName = companyName;
         this.phoneNumber = phoneNumber;
@@ -23,12 +28,12 @@ public class Shipper {
         return shipperID;
     }
 
+    public void setShipperID(int shipperID) {
+        this.shipperID = shipperID;
+    }
+
     @Override
     public String toString() {
-        return "Shipper{" +
-                "companyName='" + companyName + '\'' +
-                ", shipperID=" + shipperID +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                '}';
+        return shipperID + " | " + companyName + " | " + phoneNumber;
     }
 }
